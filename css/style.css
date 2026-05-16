@@ -605,36 +605,66 @@ section { padding: 5rem 0; }
 .team-card {
   background: var(--white);
   border-radius: var(--radius-lg);
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 1.75rem;
   text-align: center;
   transition: var(--transition);
   border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal), var(--teal-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition);
 }
 
 .team-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: var(--teal-light);
+  border-color: rgba(0,158,120,0.2);
 }
 
+.team-card:hover::after { transform: scaleX(1); }
+
 .team-icon {
-  width: 64px; height: 64px;
-  background: linear-gradient(135deg, var(--teal-pale), var(--teal-mist));
+  width: 88px; height: 88px;
+  background: linear-gradient(145deg, var(--teal-pale), #d0f0e8);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.25rem;
+  transition: var(--transition);
+  overflow: hidden;
+  border: 3px solid rgba(0,158,120,0.12);
+  box-shadow: 0 4px 16px rgba(0,158,120,0.10);
+}
+
+.team-icon svg {
+  width: 56px;
+  height: 56px;
   transition: var(--transition);
 }
 
 .team-card:hover .team-icon {
-  background: linear-gradient(135deg, var(--teal), var(--teal-light));
+  background: linear-gradient(145deg, #b8ead8, var(--teal-pale));
+  border-color: rgba(0,158,120,0.28);
+  box-shadow: 0 8px 24px rgba(0,158,120,0.18);
+  transform: scale(1.06);
 }
 
-.team-card h4 { font-size: 1rem; color: var(--charcoal); margin-bottom: 0.25rem; }
-.team-card p { font-size: 0.8rem; color: var(--grey); }
+.team-card:hover .team-icon svg {
+  transform: scale(1.08);
+}
+
+.team-card h4 { font-size: 1rem; color: var(--charcoal); margin-bottom: 0.35rem; font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
+.team-card p { font-size: 0.82rem; color: var(--grey); line-height: 1.55; }
 
 /* ===== CONFIDENTIALITY ===== */
 .confidentiality {
