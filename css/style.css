@@ -633,37 +633,61 @@ section { padding: 5rem 0; }
 .team-card:hover::after { transform: scaleX(1); }
 
 .team-icon {
-  width: 88px; height: 88px;
-  background: linear-gradient(145deg, var(--teal-pale), #d0f0e8);
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0 auto 1.25rem;
-  transition: var(--transition);
   overflow: hidden;
-  border: 3px solid rgba(0,158,120,0.12);
-  box-shadow: 0 4px 16px rgba(0,158,120,0.10);
+  border: 3px solid rgba(0,158,120,0.15);
+  box-shadow: 0 4px 16px rgba(0,158,120,0.12);
+  background: var(--teal-pale);
+  transition: var(--transition);
+  position: relative;
 }
 
-.team-icon svg {
-  width: 56px;
-  height: 56px;
+.team-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
   transition: var(--transition);
+}
+
+/* Fallback placeholder shown when no image is set */
+.team-icon .team-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--teal-pale), #d0f0e8);
+  color: var(--teal);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  gap: 4px;
+}
+
+.team-icon .team-placeholder svg {
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
 }
 
 .team-card:hover .team-icon {
-  background: linear-gradient(145deg, #b8ead8, var(--teal-pale));
-  border-color: rgba(0,158,120,0.28);
-  box-shadow: 0 8px 24px rgba(0,158,120,0.18);
+  border-color: rgba(0,158,120,0.35);
+  box-shadow: 0 8px 28px rgba(0,158,120,0.2);
+  transform: scale(1.04);
+}
+
+.team-card:hover .team-icon img {
   transform: scale(1.06);
 }
 
-.team-card:hover .team-icon svg {
-  transform: scale(1.08);
-}
-
-.team-card h4 { font-size: 1rem; color: var(--charcoal); margin-bottom: 0.35rem; font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
+.team-card h4 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--charcoal); margin-bottom: 0.35rem; }
 .team-card p { font-size: 0.82rem; color: var(--grey); line-height: 1.55; }
 
 /* ===== CONFIDENTIALITY ===== */
