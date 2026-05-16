@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Lifeline Haven Limited</title>
+  <meta name="description" content="Learn about Lifeline Haven Limited — our mission, values, team and approach to healthcare in Ghana." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--teal-deep), var(--teal));
+      padding: 10rem 0 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-hero h1 { color: var(--white); position: relative; }
+    .page-hero p { color: rgba(255,255,255,0.75); max-width: 550px; margin: 1.25rem auto 0; position: relative; }
+    .page-hero .section-label { color: rgba(255,255,255,0.7); justify-content: center; position: relative; }
+    .page-hero .section-label::before { background: rgba(255,255,255,0.5); }
+
+    .mission-section { background: var(--white); }
+    .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    @media(max-width:768px){ .mission-grid { grid-template-columns:1fr; gap:2.5rem; } }
+
+    .mission-card {
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+      border-radius: var(--radius-xl);
+      padding: 3.5rem;
+      color: white;
+    }
+    .mission-card h2 { color: white; margin-bottom: 1.25rem; }
+    .mission-card p { color: rgba(255,255,255,0.8); line-height: 1.8; }
+    .mission-card blockquote {
+      border-left: 3px solid rgba(255,255,255,0.4);
+      padding-left: 1.25rem;
+      margin-top: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.6;
+    }
+
+    .pillars { background: var(--cream); }
+    .pillars-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 3rem; }
+    @media(max-width:768px){ .pillars-grid { grid-template-columns: 1fr; } }
+
+    .pillar-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      border-top: 4px solid var(--teal);
+      transition: var(--transition);
+    }
+    .pillar-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .pillar-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      color: var(--teal-pale);
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .pillar-card h4 { font-size: 1.1rem; color: var(--teal-dark); margin-bottom: 0.75rem; }
+    .pillar-card p { font-size: 0.875rem; }
+
+    .sectors-section { background: var(--white); }
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    @media(max-width:768px){ .sectors-grid { grid-template-columns: 1fr 1fr; } }
+
+    .sector-card {
+      padding: 2rem;
+      background: var(--teal-mist);
+      border-radius: var(--radius-lg);
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .sector-card:hover { background: var(--teal); border-color: var(--teal); }
+    .sector-card:hover h4, .sector-card:hover p { color: white; }
+    .sector-card-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+    .sector-card h4 { font-size: 1rem; color: var(--teal-dark); margin-bottom: 0.35rem; transition: var(--transition); }
+    .sector-card p { font-size: 0.8rem; color: var(--slate); transition: var(--transition); }
+
+    .innovation { background: var(--off-white); }
+    .inno-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+    @media(max-width:768px){ .inno-grid { grid-template-columns: 1fr; } }
+
+    .inno-item { padding: 2rem; border-left: 3px solid var(--teal); }
+    .inno-item h4 { color: var(--teal-dark); margin-bottom: 0.75rem; font-size: 1.1rem; }
+    .inno-item p { font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="mobile-nav">
+    <button class="mobile-close">✕</button>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="../index.html#goals" class="nav-link">Goals</a>
+    <a href="../index.html#team" class="nav-link">Team</a>
+    <a href="../index.html#contact" class="nav-link">Contact</a>
+    <a href="../index.html#booking" class="btn btn-primary">Book a Consultation</a>
+  </nav>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+          <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="18" fill="rgba(255,255,255,0.15)"/>
+            <path d="M18 26s-9-5.5-9-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-9 11-9 11z" fill="white" opacity="0.9"/>
+          </svg>
+          <div class="nav-logo-text">Lifeline Haven<span>Limited</span></div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="../index.html#goals" class="nav-link">Goals</a></li>
+          <li><a href="../index.html#team" class="nav-link">Team</a></li>
+          <li><a href="../index.html#confidentiality" class="nav-link">Privacy</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="../index.html#booking" class="btn btn-white nav-cta">Book a Consultation</a>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label">Our Story</div>
+      <h1>About Lifeline Haven</h1>
+      <p>A healthcare organization built on trust, innovation, and an unwavering commitment to improving health outcomes across Ghana.</p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="mission-section">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-card animate-up">
+          <h2>Our Mission</h2>
+          <p>To serve as a healthcare ambassador for the Corporate world, Industrial world, Schools, Religious organizations, Restaurants, Hotels, Social organizations and their family members — improving health and productivity through innovative health programs.</p>
+          <blockquote>"Care Beyond Duty"</blockquote>
+        </div>
+        <div class="animate-up delay-2">
+          <div class="section-label">Who We Are</div>
+          <h2 style="margin-top:0.5rem;">Redefining Excellence in Medical Support</h2>
+          <p style="margin-top:1.25rem;">Lifeline Haven Limited is a Healthcare Organization that transcends boundaries to redefine excellence in the realm of medical support. With our unwavering commitment to delivering exceptional quality of service, we have become the beacon of trust and innovation in the healthcare sector.</p>
+          <p style="margin-top:1rem;">We merged technology with the expertise of our dedicated professionals to deliver beyond expectations — timely, efficient, and always at the forefront of change. We are reshaping the medical support landscape in Ghana and beyond.</p>
+          <a href="services.html" class="btn btn-primary" style="margin-top:2rem;">Explore Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars -->
+  <section class="pillars">
+    <div class="container">
+      <div style="text-align:center;max-width:600px;margin:0 auto 1rem;" class="animate-up">
+        <div class="section-label" style="justify-content:center;">What Drives Us</div>
+        <h2>Values That <em class="italic teal">Define Us</em></h2>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card animate-up">
+          <div class="pillar-num">01</div>
+          <h4>Trust</h4>
+          <p>Our commitment to integrity strengthens our bonds with clients and partners alike. Everything we do is anchored in transparency, honesty, and respect for the individuals in our care.</p>
+        </div>
+        <div class="pillar-card animate-up delay-1">
+          <div class="pillar-num">02</div>
+          <h4>Customer Satisfaction</h4>
+          <p>Exceeding expectations is our norm; customer-centricity is our driving force. We listen deeply to our clients and tailor every service to their unique needs and context.</p>
+        </div>
+        <div class="pillar-card animate-up delay-2">
+          <div class="pillar-num">03</div>
+          <h4>Professionalism</h4>
+          <p>Ethical conduct is our cornerstone; professionalism guides our every interaction. Our team upholds the highest standards of the medical profession in every engagement.</p>
+        </div>
+        <div class="pillar-card animate-up delay-1">
+          <div class="pillar-num">04</div>
+          <h4>Innovation</h4>
+          <p>Innovation is the pulse of our progress, propelling us towards new heights. We continually invest in new technologies and approaches to deliver better health outcomes.</p>
+        </div>
+        <div class="pillar-card animate-up delay-2">
+          <div class="pillar-num">05</div>
+          <h4>Collaborative Excellence</h4>
+          <p>We have formed strong alliances with renowned healthcare centers, innovative medical technology firms and environmental management companies to amplify our impact.</p>
+        </div>
+        <div class="pillar-card animate-up delay-3">
+          <div class="pillar-num">06</div>
+          <h4>Care Beyond Duty</h4>
+          <p>Our founding promise. We don't stop at the minimum; we go above and beyond in every service, every interaction, and every follow-up to ensure lasting health outcomes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sectors -->
+  <section class="sectors-section">
+    <div class="container">
+      <div style="text-align:center;max-width:600px;margin:0 auto 1rem;" class="animate-up">
+        <div class="section-label" style="justify-content:center;">Who We Serve</div>
+        <h2>Healthcare for <em class="italic teal">Every Sector</em></h2>
+        <p style="margin-top:1rem;">We are proud to serve a wide range of organizations and individuals, bringing quality healthcare to wherever it is needed most.</p>
+      </div>
+      <div class="sectors-grid">
+        <div class="sector-card animate-up">
+          <div class="sector-card-icon">🏢</div>
+          <h4>Corporate</h4>
+          <p>Occupational health, wellness programs and onsite medicals for businesses of all sizes</p>
+        </div>
+        <div class="sector-card animate-up delay-1">
+          <div class="sector-card-icon">🏭</div>
+          <h4>Industrial</h4>
+          <p>Environmental health, safety assessments and hazard management for industrial environments</p>
+        </div>
+        <div class="sector-card animate-up delay-2">
+          <div class="sector-card-icon">🏫</div>
+          <h4>Schools</h4>
+          <p>Pre-enrollment medicals, immunization, health education and wellness for students and staff</p>
+        </div>
+        <div class="sector-card animate-up">
+          <div class="sector-card-icon">⛪</div>
+          <h4>Religious Organizations</h4>
+          <p>Community health programs, screenings, and health education tailored for faith communities</p>
+        </div>
+        <div class="sector-card animate-up delay-1">
+          <div class="sector-card-icon">🏨</div>
+          <h4>Hotels & Restaurants</h4>
+          <p>Staff health certifications, food safety health checks, and occupational wellness programs</p>
+        </div>
+        <div class="sector-card animate-up delay-2">
+          <div class="sector-card-icon">👨‍👩‍👧‍👦</div>
+          <h4>Families & Individuals</h4>
+          <p>Personal health checks, nutritional counselling, immunization and psychosocial support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Innovation -->
+  <section class="innovation">
+    <div class="container">
+      <div class="animate-up">
+        <div class="section-label">How We Work</div>
+        <h2>Innovative Excellence in <em class="italic teal">Healthcare</em></h2>
+      </div>
+      <div class="inno-grid">
+        <div class="inno-item animate-up delay-1">
+          <h4>🤝 Innovative Excellence</h4>
+          <p>Collaboration fuels our success. We have formed strong alliances with renowned healthcare centers, innovative medical technology firms, and environmental management companies — amplifying our impact on services that truly matter.</p>
+        </div>
+        <div class="inno-item animate-up delay-2">
+          <h4>🧭 Governance of Visionaries</h4>
+          <p>Our secret ingredient is innovation. We merge technology with the expertise of our dedicated professionals to deliver beyond expectations — timely, efficient, and always at the forefront of change, reshaping the medical support landscape.</p>
+        </div>
+        <div class="inno-item animate-up delay-3">
+          <h4>🌟 Exceptional Partnerships</h4>
+          <p>Our Board of Directors is a strategic powerhouse that ensures our journey is charged with precision. They steer us towards opportunities, evaluate risks, and uphold our values of integrity and excellence in everything we do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--teal);padding:5rem 0;text-align:center;">
+    <div class="container animate-up">
+      <h2 style="color:#fff;margin-bottom:1rem;">Join Us on This Journey</h2>
+      <p style="color:rgba(255,255,255,0.8);max-width:500px;margin:0 auto 2rem;">Lifeline Haven Limited is not just a business — it is a legacy of trust, innovation, and excellence. Let's redefine the future of medical support together.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="../index.html#booking" class="btn btn-white">Book a Consultation</a>
+        <a href="services.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5);color:#fff;">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text">Lifeline Haven<span>Limited</span></div>
+          <p class="footer-tagline">Care Beyond Duty</p>
+          <p style="margin-top:1.25rem;">Serving corporates, schools, hotels, religious organizations, and families across Ghana.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="services.html">Pre-enrollment Medicals</a></li>
+            <li><a href="services.html">Onsite Check-up</a></li>
+            <li><a href="services.html">Screening Programs</a></li>
+            <li><a href="services.html">Vaccination</a></li>
+            <li><a href="services.html">Wellness Programs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="../index.html#team">Our Team</a></li>
+            <li><a href="../index.html#goals">Goals & Benefits</a></li>
+            <li><a href="../index.html#confidentiality">Confidentiality</a></li>
+            <li><a href="../index.html#booking">Book Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+233503761285">050 376 1285</a></li>
+            <li><a href="tel:+233246558859">024 655 8859</a></li>
+            <li><a href="mailto:info@lifelinehaven.com">info@lifelinehaven.com</a></li>
+            <li><a href="http://www.lifelinehaven.com" target="_blank">www.lifelinehaven.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 <span class="teal">Lifeline Haven Limited</span>. All rights reserved.</p>
+        <p>Designed with ❤️ for better health in Ghana</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

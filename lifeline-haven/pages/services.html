@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services — Lifeline Haven Limited</title>
+  <meta name="description" content="Explore the full range of healthcare services offered by Lifeline Haven Limited in Ghana." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--teal-deep), var(--teal));
+      padding: 10rem 0 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-hero h1 { color: var(--white); position: relative; }
+    .page-hero p { color: rgba(255,255,255,0.75); max-width: 550px; margin: 1.25rem auto 0; position: relative; }
+    .page-hero .section-label { color: rgba(255,255,255,0.7); justify-content: center; position: relative; }
+    .page-hero .section-label::before { background: rgba(255,255,255,0.5); }
+
+    .services-detail { background: var(--off-white); }
+
+    .service-detail-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      margin-bottom: 1.5rem;
+    }
+    .service-detail-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .service-detail-card:nth-child(even) { grid-template-columns: 2fr 1fr; }
+    .service-detail-card:nth-child(even) .sdc-sidebar { order: 2; }
+    .service-detail-card:nth-child(even) .sdc-content { order: 1; }
+
+    .sdc-sidebar {
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .sdc-sidebar-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+    .sdc-sidebar h3 { color: var(--white); font-size: 1.3rem; }
+
+    .sdc-content { padding: 3rem; }
+    .sdc-content p { margin-bottom: 1.25rem; }
+    .sdc-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+    .sdc-tag {
+      padding: 0.3rem 0.8rem;
+      background: var(--teal-pale);
+      color: var(--teal-dark);
+      font-size: 0.75rem;
+      font-weight: 500;
+      border-radius: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .service-detail-card,
+      .service-detail-card:nth-child(even) {
+        grid-template-columns: 1fr;
+      }
+      .service-detail-card:nth-child(even) .sdc-sidebar,
+      .service-detail-card:nth-child(even) .sdc-content { order: unset; }
+      .sdc-sidebar { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="mobile-nav">
+    <button class="mobile-close">✕</button>
+    <a href="../index.html#about" class="nav-link">About</a>
+    <a href="services.html" class="nav-link active">Services</a>
+    <a href="../index.html#goals" class="nav-link">Goals</a>
+    <a href="../index.html#team" class="nav-link">Team</a>
+    <a href="../index.html#contact" class="nav-link">Contact</a>
+    <a href="../index.html#booking" class="btn btn-primary">Book a Consultation</a>
+  </nav>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+          <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="18" fill="rgba(255,255,255,0.15)"/>
+            <path d="M18 26s-9-5.5-9-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-9 11-9 11z" fill="white" opacity="0.9"/>
+          </svg>
+          <div class="nav-logo-text">Lifeline Haven<span>Limited</span></div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="../index.html#goals" class="nav-link">Goals</a></li>
+          <li><a href="../index.html#team" class="nav-link">Team</a></li>
+          <li><a href="../index.html#confidentiality" class="nav-link">Privacy</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="../index.html#booking" class="btn btn-white nav-cta">Book a Consultation</a>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label">What We Offer</div>
+      <h1>Our Services</h1>
+      <p>A comprehensive suite of healthcare services delivered by a multidisciplinary team of qualified professionals — onsite, on time, and beyond expectation.</p>
+    </div>
+  </section>
+
+  <section class="services-detail">
+    <div class="container">
+
+      <div class="service-detail-card animate-up">
+        <div class="sdc-sidebar">
+          <div class="sdc-sidebar-icon">🩺</div>
+          <h3>Pre-enrollment Medicals</h3>
+        </div>
+        <div class="sdc-content">
+          <h3 style="margin-bottom:1rem;">Comprehensive Entry Health Assessment</h3>
+          <p>Our pre-enrollment medical service is designed to give organizations a clear picture of the health status of new members, employees, or students before they officially join. This ensures that any existing conditions are identified early and managed appropriately.</p>
+          <p>The service includes detailed history taking, physical examinations, generation of medical reports, professional health advice, and referrals to specialists where necessary.</p>
+          <div class="sdc-tags">
+            <span class="sdc-tag">History Taking</span>
+            <span class="sdc-tag">Medical Reports</span>
+            <span class="sdc-tag">Health Advice</span>
+            <span class="sdc-tag">Specialist Referrals</span>
+            <span class="sdc-tag">Corporates</span>
+            <span class="sdc-tag">Schools</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card animate-up delay-1">
+        <div class="sdc-sidebar">
+          <div class="sdc-sidebar-icon">🏢</div>
+          <h3>Onsite Medical Check-up</h3>
+        </div>
+        <div class="sdc-content">
+          <h3 style="margin-bottom:1rem;">Healthcare Delivered to Your Door</h3>
+          <p>We bring our medical team directly to your workplace, school, or premises to conduct thorough medical assessments. This eliminates the need for employees or members to leave your premises, saving time and increasing participation.</p>
+          <p>Each onsite visit includes a full health assessment, examination, and where required, the issuance of an official medical certificate by our licensed physicians.</p>
+          <div class="sdc-tags">
+            <span class="sdc-tag">Full Assessment</span>
+            <span class="sdc-tag">Medical Certificates</span>
+            <span class="sdc-tag">Onsite Delivery</span>
+            <span class="sdc-tag">All Sectors</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card animate-up">
+        <div class="sdc-sidebar">
+          <div class="sdc-sidebar-icon">📋</div>
+          <h3>Health Policy Development</h3>
+        </div>
+        <div class="sdc-content">
+          <h3 style="margin-bottom:1rem;">Building a Healthier Organization</h3>
+          <p>A sound health policy is the foundation of a healthy workplace. Our team works with organizational leadership to develop, review, and implement comprehensive health policies tailored to your specific sector and workforce.</p>
+          <p>We ensure your policy is legally compliant, practical to implement, and designed to genuinely improve health outcomes for your people.</p>
+          <div class="sdc-tags">
+            <span class="sdc-tag">Policy Review</span>
+            <span class="sdc-tag">Implementation</span>
+            <span class="sdc-tag">Compliance</span>
+            <span class="sdc-tag">Corporates</span>
+            <span class="sdc-tag">Schools</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card animate-up delay-1">
+        <div class="sdc-sidebar">
+          <div class="sdc-sidebar-icon">🔬</div>
+          <h3>Screening Programs</h3>
+        </div>
+        <div class="sdc-content">
+          <h3 style="margin-bottom:1rem;">Early Detection Saves Lives</h3>
+          <p>Our health screening programs are designed to detect conditions before they become serious. From blood pressure and diabetes screening to vision checks and more, we provide targeted programs based on your organization's risk profile.</p>
+          <p>Early detection allows for timely intervention, reducing the long-term health and financial impact of unmanaged conditions on your workforce and community.</p>
+          <div class="sdc-tags">
+            <span class="sdc-tag">Blood Pressure</span>
+            <span class="sdc-tag">Diabetes</span>
+            <span class="sdc-tag">Vision</span>
+            <span class="sdc-tag">BMI</span>
+            <span class="sdc-tag">All Ages</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card animate-up">
+        <div class="sdc-sidebar">
+          <div class="sdc-sidebar-icon">💉</div>
+          <h3>Vaccination & Immunization</h3>
+        </div>
+        <div class="sdc-content">
+          <h3 style="margin-bottom:1rem;">Protecting Your Community</h3>
+          <p>Lifeline Haven provides both child immunization programs and adult vaccination services. Our pharmacists and nurses ensure safe, accurate administration of vaccines in a comfortable, private setting.</p>
+          <p>We can coordinate mass vaccination drives for organizations, schools, and communities, handling logistics, record-keeping, and follow-up reminders for booster doses.</p>
+          <div class="sdc-tags">
+            <span class="sdc-tag">Child Immunization</span>
+            <span class="sdc-tag">Adult Vaccination</span>
+            <span class="sdc-tag">Mass Drives</span>
+            <span class="sdc-tag">Record Keeping</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card animate-up delay-1">
+        <div class="sdc-sidebar">
+          <div class="sdc-sidebar-icon">🎓</div>
+          <h3>Health Education & Training</h3>
+        </div>
+        <div class="sdc-content">
+          <h3 style="margin-bottom:1rem;">Knowledge Is the Best Medicine</h3>
+          <p>Our health education and training sessions are interactive, evidence-based, and tailored to your audience — whether that's a corporate boardroom, a school classroom, or a community hall. Topics include hygiene, nutrition, disease prevention, mental health, environmental safety, and first aid.</p>
+          <p>We also offer certified training programs for health and safety officers within organizations.</p>
+          <div class="sdc-tags">
+            <span class="sdc-tag">Hygiene</span>
+            <span class="sdc-tag">Nutrition</span>
+            <span class="sdc-tag">Mental Health</span>
+            <span class="sdc-tag">First Aid</span>
+            <span class="sdc-tag">H&S Training</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card animate-up">
+        <div class="sdc-sidebar">
+          <div class="sdc-sidebar-icon">🧠</div>
+          <h3>Psychosocial & Wellness</h3>
+        </div>
+        <div class="sdc-content">
+          <h3 style="margin-bottom:1rem;">Mind, Body & Community Wellness</h3>
+          <p>Mental and emotional health is as important as physical wellbeing. Our clinical psychologists and counselors offer psychosocial support, group wellness activities, and one-on-one counselling sessions for individuals and teams.</p>
+          <p>Our wellness programs are designed to boost morale, reduce stress, and create a positive, productive atmosphere in any organization.</p>
+          <div class="sdc-tags">
+            <span class="sdc-tag">Counselling</span>
+            <span class="sdc-tag">Stress Management</span>
+            <span class="sdc-tag">Group Sessions</span>
+            <span class="sdc-tag">Wellness Activities</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card animate-up delay-1">
+        <div class="sdc-sidebar">
+          <div class="sdc-sidebar-icon">🌿</div>
+          <h3>Occupational Health & Safety</h3>
+        </div>
+        <div class="sdc-content">
+          <h3 style="margin-bottom:1rem;">A Safe Environment for Everyone</h3>
+          <p>Our occupational health and environmental management services help organizations identify hazards, assess risks, and implement systems to protect workers and the surrounding environment. This covers physical, chemical, biological, and ergonomic risks.</p>
+          <p>We produce detailed reports, recommend control measures, and work with your team to ensure compliance with Ghana's occupational health and safety regulations.</p>
+          <div class="sdc-tags">
+            <span class="sdc-tag">Risk Assessment</span>
+            <span class="sdc-tag">Hazard Identification</span>
+            <span class="sdc-tag">Compliance</span>
+            <span class="sdc-tag">Environmental Mgmt</span>
+            <span class="sdc-tag">Industrial</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--teal);padding:5rem 0;text-align:center;">
+    <div class="container animate-up">
+      <h2 style="color:#fff;margin-bottom:1rem;">Ready to Get Started?</h2>
+      <p style="color:rgba(255,255,255,0.8);max-width:500px;margin:0 auto 2rem;">Book a free consultation with our team and let's design the right health program for your organization.</p>
+      <a href="../index.html#booking" class="btn btn-white">Book a Consultation</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text">Lifeline Haven<span>Limited</span></div>
+          <p class="footer-tagline">Care Beyond Duty</p>
+          <p style="margin-top:1.25rem;">Serving corporates, schools, hotels, religious organizations, and families across Ghana.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="services.html">Pre-enrollment Medicals</a></li>
+            <li><a href="services.html">Onsite Check-up</a></li>
+            <li><a href="services.html">Screening Programs</a></li>
+            <li><a href="services.html">Vaccination</a></li>
+            <li><a href="services.html">Wellness Programs</a></li>
+            <li><a href="services.html">Occupational Health</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#team">Our Team</a></li>
+            <li><a href="../index.html#goals">Goals & Benefits</a></li>
+            <li><a href="../index.html#confidentiality">Confidentiality</a></li>
+            <li><a href="../index.html#booking">Book Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+233503761285">050 376 1285</a></li>
+            <li><a href="tel:+233246558859">024 655 8859</a></li>
+            <li><a href="mailto:info@lifelinehaven.com">info@lifelinehaven.com</a></li>
+            <li><a href="http://www.lifelinehaven.com" target="_blank">www.lifelinehaven.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 <span class="teal">Lifeline Haven Limited</span>. All rights reserved.</p>
+        <p>Designed with ❤️ for better health in Ghana</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
